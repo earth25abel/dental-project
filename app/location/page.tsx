@@ -6,10 +6,12 @@ export const metadata: Metadata = {
   description: "Dental Pro 위치, 주소, 주차 안내.",
 };
 
+/**
+ * 카카오맵 API 키: .env.local에 NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY=발급키 추가
+ * 발급: https://developers.kakao.com/console/app
+ */
 const address = "서울특별시 강남구 테헤란로 152 강남파이낸스센터";
 const phone = "02-1234-5678";
-
-// 카카오맵 좌표 (카카오맵에서 주소 검색 후 좌표 확인 가능)
 const MAP_LAT = 37.5006;
 const MAP_LNG = 127.0364;
 
@@ -33,49 +35,45 @@ export default function LocationPage() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-        <section>
-          <h2 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-            <span className="w-1 h-5 bg-[var(--deep-blue)] rounded-full" aria-hidden />
-            지도
-          </h2>
-          <KakaoMap
-            lat={MAP_LAT}
-            lng={MAP_LNG}
-            address={address}
-            level={3}
-            showMarker
-            placeName="Dental Pro"
-          />
-        </section>
-
-        <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <span className="w-1 h-5 bg-[var(--deep-blue)] rounded-full" aria-hidden />
-            주소
-          </h2>
-          <div className="space-y-3 text-slate-600">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* 지도 + 주소 카드 그리드 */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <div className="lg:col-span-2">
+            <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+              <KakaoMap
+                lat={MAP_LAT}
+                lng={MAP_LNG}
+                address={address}
+                level={3}
+                showMarker
+                placeName="Dental Pro"
+              />
+            </div>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-center">
+            <h2 className="text-base font-semibold text-slate-800 mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-[var(--deep-blue)] rounded-full" aria-hidden />
+              주소
+            </h2>
             <p className="font-medium text-slate-800">{address}</p>
-            <p>
-              <span className="text-slate-500">전화 </span>
-              <a
-                href={`tel:${phone.replace(/-/g, "")}`}
-                className="text-[var(--deep-blue)] font-medium hover:underline"
-              >
-                {phone}
-              </a>
-            </p>
+            <a
+              href={`tel:${phone.replace(/-/g, "")}`}
+              className="mt-2 text-[var(--deep-blue)] font-medium hover:underline"
+            >
+              {phone}
+            </a>
             <a
               href={`https://map.kakao.com/link/to/${encodeURIComponent("Dental Pro")},${MAP_LAT},${MAP_LNG}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-2 text-sm font-medium text-[var(--deep-blue)] hover:underline"
+              className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-[var(--deep-blue)] hover:underline"
             >
-              카카오맵에서 길찾기 →
+              카카오맵 길찾기 →
             </a>
           </div>
-        </section>
+        </div>
 
+        {/* 주차 안내 */}
         <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
           <h2 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
             <span className="w-1 h-5 bg-[var(--deep-blue)] rounded-full" aria-hidden />

@@ -20,7 +20,7 @@ const doctors: Doctor[] = [
     role: "대표원장",
     specialty: "임플란트 · 보철 · 일반진료",
     intro: "환자 한 분 한 분을 가족처럼 생각하며, 아프지 않은 진료를 위해 노력합니다.",
-    image: null, // 사진 추가 시 예: "/images/doctors/doctor1.jpg"
+    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=560&q=80",
     career: [
       "○○대학교 치의학과 졸업",
       "○○대학교 병원 수련의",
@@ -33,7 +33,7 @@ const doctors: Doctor[] = [
     role: "원장",
     specialty: "교정 · 심미치료",
     intro: "정직한 상담과 꼼꼼한 치료로 환자님의 미소를 지켜드립니다.",
-    image: null,
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=560&q=80",
     career: [
       "○○대학교 치의학과 졸업",
       "○○대학교 교정과 전문의",
@@ -45,7 +45,7 @@ const doctors: Doctor[] = [
     role: "원장",
     specialty: "소아치료 · 예방치료",
     intro: "아이들이 두려움 없이 찾을 수 있는 따뜻한 치과를 만들고자 합니다.",
-    image: null,
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=560&q=80",
     career: [
       "○○대학교 치의학과 졸업",
       "○○대학교 소아치과 수련",
@@ -58,8 +58,7 @@ function DoctorCard({ name, role, specialty, intro, image, career }: Doctor) {
   return (
     <article className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
       <div className="flex flex-col md:flex-row">
-        {/* 사진 영역: image에 경로 넣으면 <img>로 표시, 없으면 이니셜 플레이스홀더 */}
-        <div className="md:w-56 shrink-0 aspect-[4/5] md:aspect-auto md:h-[280px] relative bg-[var(--deep-blue-light)]">
+        <div className="md:w-56 shrink-0 aspect-[4/5] md:aspect-auto md:h-[280px] relative bg-[var(--deep-blue-light)] overflow-hidden">
           {image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -91,7 +90,6 @@ function DoctorCard({ name, role, specialty, intro, image, career }: Doctor) {
           </p>
           <p className="mt-4 text-slate-600 leading-relaxed">{intro}</p>
 
-          {/* 약력 */}
           <div className="mt-6 pt-6 border-t border-slate-100">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
               약력
