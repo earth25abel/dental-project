@@ -15,7 +15,7 @@ export default function ReservationForm() {
 
   if (submitted) {
     return (
-      <div className="text-center p-6 rounded-xl border border-[#0066FF]/20 bg-[#0066FF]/5">
+      <div className="text-center p-6 rounded-xl border border-[var(--deep-blue)]/20 bg-[var(--deep-blue-muted)]">
         <p className="text-slate-800 font-medium">예약 요청이 접수되었습니다.</p>
         <p className="mt-1 text-sm text-slate-600">
           입력하신 연락처로 확인 후 연락드리겠습니다.
@@ -37,7 +37,7 @@ export default function ReservationForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="홍길동"
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0066FF] focus:border-transparent"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--deep-blue)] focus:border-transparent"
         />
       </div>
       <div>
@@ -51,7 +51,7 @@ export default function ReservationForm() {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="010-1234-5678"
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0066FF] focus:border-transparent"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--deep-blue)] focus:border-transparent"
         />
       </div>
       <div>
@@ -64,12 +64,12 @@ export default function ReservationForm() {
           required
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0066FF] focus:border-transparent"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-800 focus:outline-none focus:ring-2 focus:ring-[var(--deep-blue)] focus:border-transparent"
         />
       </div>
       <button
         type="submit"
-        className="w-full py-3 rounded-lg bg-[#0066FF] text-white font-semibold hover:bg-[#0052CC] active:bg-[#0047B3] transition-colors"
+        className="w-full py-3 rounded-lg bg-[var(--deep-blue)] text-white font-semibold hover:bg-[var(--deep-blue-hover)] transition-colors"
       >
         예약 요청하기
       </button>

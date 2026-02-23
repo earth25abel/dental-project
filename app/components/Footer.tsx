@@ -11,12 +11,11 @@ const hours = [
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-sky-100 bg-sky-50/50">
+    <footer className="mt-auto border-t border-slate-200 bg-[var(--deep-blue-muted)]">
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
-          {/* 주소 */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-sky-600 mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--deep-blue)] mb-2">
               주소
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed">
@@ -24,28 +23,24 @@ export default function Footer() {
             </p>
             <Link
               href="/location"
-              className="inline-block mt-2 text-sm font-medium text-sky-600 hover:text-sky-700 hover:underline"
+              className="inline-block mt-2 text-sm font-medium text-[var(--deep-blue)] hover:underline"
             >
               오시는 길 →
             </Link>
           </div>
-
-          {/* 전화번호 */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-sky-600 mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--deep-blue)] mb-2">
               전화
             </h3>
             <a
               href={`tel:${phone.replace(/-/g, "")}`}
-              className="text-slate-700 font-medium hover:text-sky-600 transition-colors"
+              className="text-slate-700 font-medium hover:text-[var(--deep-blue)] transition-colors"
             >
               {phone}
             </a>
           </div>
-
-          {/* 진료시간 */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-sky-600 mb-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--deep-blue)] mb-2">
               진료시간
             </h3>
             <ul className="space-y-1 text-sm text-slate-600">
@@ -58,8 +53,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <p className="mt-8 pt-6 border-t border-sky-100 text-center text-xs text-slate-500">
-          © 정직한 치과. All rights reserved.
+        <p className="mt-8 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
+          © Dental Pro. All rights reserved.
         </p>
       </div>
     </footer>

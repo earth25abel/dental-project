@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
+/* Pretendard: layout에서 CDN 로드 */
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --sky-light: #f0f9ff;
-  --sky-muted: #e0f2fe;
-  --sky-accent: #0284c7;
-  --sky-deep: #0369a1;
+  --deep-blue: #0D2847;
+  --deep-blue-hover: #0A1F38;
+  --deep-blue-light: #E8EEF4;
+  --deep-blue-muted: #F5F7FA;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
 }
