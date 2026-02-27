@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
+
 import { useEffect, useRef, useState } from "react";
 
 type KakaoMapProps = {
@@ -29,7 +35,8 @@ export default function KakaoMap({
   placeName = "Dental Pro",
 }: KakaoMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<kakao.maps.Map | null>(null);
+  //const mapRef = useRef<kakao.maps.Map | null>(null);
+  const mapRef = useRef<any>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
