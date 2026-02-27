@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import KakaoFloatingButton from "./components/KakaoFloatingButton";
 
 export const metadata: Metadata = {
   title: "Dental Pro | 프리미엄 치과",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Nav />
         <div className="flex-1">{children}</div>
         <Footer />
+        <KakaoFloatingButton />
       </body>
     </html>
   );
