@@ -17,7 +17,7 @@ export default function HomeSections() {
               <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[rgba(240,193,115,0.12)] text-[var(--accent-gold)]">
                 ●
               </span>
-              강남 프리미엄 치과 · 1:1 프라이빗 진료
+              프리미엄 치과 · 1:1 프라이빗 진료
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-[3.1rem] font-semibold text-[var(--foreground)] tracking-tight leading-tight">
               아프지 않게,
@@ -29,7 +29,7 @@ export default function HomeSections() {
             <p className="mt-6 text-base sm:text-lg text-[var(--muted-foreground)] max-w-xl">
               최소 삭제, 보존 중심의 진료 철학으로
               <br className="hidden sm:block" />
-              결과보다 과정을 더 엄격히 관리하는 강남 프리미엄 치과입니다.
+              결과보다 과정을 더 엄격히 관리하는 프리미엄 치과입니다.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button

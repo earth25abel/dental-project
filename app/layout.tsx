@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Dental Pro | 프리미엄 치과",
-  description: "강남 프리미엄 치과 - 신뢰와 전문성으로 함께합니다.",
+  description: "프리미엄 치과 - 신뢰와 전문성으로 함께합니다.",
 };
 
 export default function RootLayout({

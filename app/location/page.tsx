@@ -10,7 +10,7 @@ export const metadata: Metadata = {
  * 카카오맵 API 키: .env.local에 NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY=발급키 추가
  * 발급: https://developers.kakao.com/console/app
  */
-const address = "서울특별시 강남구 테헤란로 152 강남파이낸스센터";
+const address = "서울특별시 테헤란로 152 파이낸스센터";
 const phone = "02-1234-5678";
 const MAP_LAT = 37.5006;
 const MAP_LNG = 127.0364;
