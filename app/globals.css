@@ -2,16 +2,41 @@
 
 /* Pretendard: layout에서 CDN 로드 */
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --deep-blue: #0D2847;
-  --deep-blue-hover: #0A1F38;
-  --deep-blue-light: #E8EEF4;
-  --deep-blue-muted: #F5F7FA;
+  --background: #050710;
+  --background-elevated: #070a14;
+  --background-soft: #0b1020;
+  --foreground: #e5edf7;
+  --muted-foreground: #9ba4b8;
+  --deep-blue: #0f2747;
+  --deep-blue-hover: #132f58;
+  --deep-blue-light: #1a3154;
+  --deep-blue-muted: #0d1b30;
+  --accent-gold: #f0c173;
+  --accent-gold-soft: rgba(240, 193, 115, 0.18);
+  --border-subtle: rgba(148, 163, 184, 0.24);
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background:
+    radial-gradient(circle at top left, rgba(240, 193, 115, 0.06), transparent 55%),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 55%),
+    radial-gradient(circle at bottom, rgba(15, 23, 42, 0.9), #020617);
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 프리미엄 카드 느낌의 공통 유틸리티 */
+.elevated-panel {
+  background: radial-gradient(circle at top left, rgba(240, 193, 115, 0.08), transparent 55%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.92));
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.subtle-border {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.16), transparent 55%);
 }

@@ -16,28 +16,40 @@ export default function Nav() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/98 backdrop-blur border-b border-slate-200">
-        <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-6">
+      <header className="sticky top-0 z-50 bg-[rgba(3,7,18,0.92)] backdrop-blur-xl border-b border-[rgba(148,163,184,0.24)]">
+        <nav className="max-w-6xl mx-auto px-4 h-18 flex items-center justify-between gap-6 py-3">
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0 text-slate-800 hover:text-[var(--deep-blue)] transition-colors"
+            className="flex items-center gap-3 shrink-0 text-[var(--foreground)] hover:text-[var(--accent-gold)] transition-colors"
           >
-            <span className="text-2xl" aria-hidden>
-              🦷
+            <span
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full subtle-border bg-[rgba(15,23,42,0.9)] text-base font-semibold tracking-tight"
+              aria-hidden
+            >
+              DP
             </span>
-            <span className="font-semibold text-lg tracking-tight">
-              Dental Pro
-            </span>
+            <div className="flex flex-col">
+              <span className="font-semibold text-lg tracking-tight">
+                Dental Pro
+              </span>
+              <span className="text-[11px] uppercase tracking-[0.24em] text-[var(--muted-foreground)]">
+                Premium Dental Clinic
+              </span>
+            </div>
           </Link>
 
-          <ul className="flex items-center gap-0.5">
+          <ul className="flex items-center gap-1.5">
             {navItems.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className="px-4 py-2 rounded-lg text-slate-600 hover:text-[var(--deep-blue)] hover:bg-[var(--deep-blue-muted)] transition-colors text-sm font-medium"
+                  className="relative px-4 py-2 rounded-full text-sm font-medium text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
                   {label}
+                  <span
+                    className="pointer-events-none absolute inset-x-3 -bottom-[2px] h-px scale-x-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent opacity-70 transition-transform duration-200 group-hover:scale-x-100"
+                    aria-hidden
+                  />
                 </Link>
               </li>
             ))}
@@ -46,7 +58,7 @@ export default function Nav() {
           <button
             type="button"
             onClick={() => setModalOpen(true)}
-            className="shrink-0 px-5 py-2.5 rounded-lg bg-[var(--deep-blue)] text-white text-sm font-semibold hover:bg-[var(--deep-blue-hover)] active:opacity-90 transition-colors shadow-sm"
+            className="shrink-0 px-5 py-2.5 rounded-full bg-[var(--accent-gold)] text-slate-900 text-sm font-semibold hover:bg-[#f7cf87] active:opacity-90 transition-colors shadow-[0_0_18px_rgba(240,193,115,0.45)]"
           >
             온라인 진료 예약
           </button>
