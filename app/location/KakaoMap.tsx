@@ -1,12 +1,8 @@
 "use client";
 
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
-
 import { useEffect, useRef, useState } from "react";
+
+const { kakao } = typeof window !== 'undefined' ? (window as any) : {};
 
 type KakaoMapProps = {
   /** 위도 (예: 37.5665) - address와 함께 주면 address로 검색 후 fallback */
